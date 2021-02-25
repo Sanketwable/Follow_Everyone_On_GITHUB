@@ -26,6 +26,7 @@ type Response struct {
 }
 
 func main() {
+	from := 628740
 	for {
 		from := 628740
 		res := getuser(from)
