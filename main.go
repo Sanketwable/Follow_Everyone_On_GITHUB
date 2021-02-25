@@ -27,7 +27,7 @@ type Response struct {
 
 func main() {
 	for {
-		from := 62874000
+		from := 628740
 		res := getuser(from)
 		for _, j := range res {
 			follow(j.Name)
