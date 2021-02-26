@@ -28,11 +28,11 @@ type Response struct {
 func main() {
 	from := 628740
 	for {
-		time.Sleep(5 * time.Second) // github detects the unusuall traffic from particular ip so having delay will not stop api response 
-		from := 628740
+
 		res := getuser(from)
 		for _, j := range res {
 			follow(j.Name)
+			time.Sleep(5 * time.Second) 	 // github detects the unusuall traffic from particular ip so having delay will not stop api response 
 			from = j.ID
 			fmt.Println("followed : ", j.Name)
 		}
